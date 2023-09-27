@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Editando '{{task.title}}'{% endblock %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>Editando '{{task.title}}'</h1>
+    <form method="POST">
+        <!-- necessario em qualquer formulario feito no django, questao de seguranca -->
+        {% csrf_token %}
+        <!-- {{form.as_p}} -->
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-sucess" value="Editar Tarefa"/>
+    </form>
+</div>
+{% endblock %}
