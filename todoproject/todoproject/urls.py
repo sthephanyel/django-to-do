@@ -26,7 +26,10 @@ urlpatterns = [
     # usa o sistema de login do proprio django
     # não é a pasta ./accounts que existe na raiz
     path('accounts/', include('django.contrib.auth.urls')),
+    # sobre nos
     path('about/', include('about.urls')),
+    # usuario
+    path('users/', include('users.urls'))
     
 
 ]

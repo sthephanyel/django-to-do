@@ -1,0 +1,13 @@
+{% extends 'base_home.html' %}
+
+{% block content %}
+<div class="offset-1">
+    <h1>Usuário</h1>
+    <p>Login: {{ user.get_username|default:"..." }}</p>
+    <p>Email: {{ user.email|default:"..." }}</p>
+    <p>Primeiro nome: {{ user.first_name|default:"..." }}</p>
+    <p>Segundo nome: {{ user.last_name|default:"..." }}</p>
+    <p>Data de Registro: {{ user.date_joined|default:"..." }}</p>
+    <p>Último login: {{ user.last_login|default:"..." }}</p>
+</div>
+{% endblock %}
